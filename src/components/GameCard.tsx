@@ -1,4 +1,6 @@
-import Card from "./Card";
+"use client";
+
+import { usePathname, useRouter } from "next/navigation";
 
 interface GameCardProps {
   game: {
@@ -13,16 +15,31 @@ interface GameCardProps {
   };
 }
 
-async function GameCard(props: GameCardProps) {
+function GameCard(props: GameCardProps) {
   const { game } = props;
 
+  const router = useRouter();
+  const pathname = usePathname();
+
   return (
-    <Card
-      href={game.id.toString()}
-      header="Game"
-      title={game.name}
-      content={`Likes: ${game.likes}`}
-    />
+    <div
+      className={`relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96 ${
+        game.id ? "hover:cursor-pointer" : ""
+      }`}
+      {...(game.id
+        ? { onClick: () => router.push(`${pathname}/${game.id}`) }
+        : {})}
+    >
+      <div className="mx-3 mb-0 border-b border-slate-200 pt-3 pb-2 px-1">
+        <span className="text-sm font-medium text-slate-600">Game</span>
+      </div>
+
+      <div className="p-4">
+        <h5 className="mb-2 text-slate-800 text-xl font-semibold">
+          {game.name}
+        </h5>
+      </div>
+    </div>
   );
 }
 
