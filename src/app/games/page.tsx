@@ -11,6 +11,7 @@ export async function getGamesAction() {
 
 async function GamesPage() {
   const { games } = await getGamesAction();
+
   return (
     <div className="grid grid-cols-3 gap-4">
       {games.map((game) => (
