@@ -34,3 +34,10 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+### Requisitos do sistema
+
+- Deve ser feito utilizando SSR
+- Deve mostrar toda a lista de jogos de forma paginada
+- Usuário convidado pode ver as publicações mas apenas o usuário logado pode dar like. (caso seja convidado, desabilitar o botão de like)
+- Todos os jogos da lista terão likes.
