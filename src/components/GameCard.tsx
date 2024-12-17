@@ -30,15 +30,15 @@ function GameCard(props: GameCardProps) {
         ? { onClick: () => router.push(`${pathname}/${game.id}`) }
         : {})}
     >
-      <div className="mx-3 mb-0 border-b border-slate-200 pt-3 pb-2 px-1">
+      <span className="mx-3 mb-0 border-b border-slate-200 pt-3 pb-2 px-1">
         <span className="text-sm font-medium text-slate-600">Game</span>
-      </div>
+      </span>
 
-      <div className="p-4">
+      <span className="p-4">
         <h5 className="mb-2 text-slate-800 text-xl font-semibold">
           {game.name}
         </h5>
-      </div>
+      </span>
     </div>
   );
 }
