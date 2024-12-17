@@ -1,3 +1,4 @@
+import BackButton from "@/components/BackButton";
 import ReviewCard from "@/components/ReviewCard";
 import { BASE_URL } from "@/constants";
 import { Game as GameType } from "@/types";
@@ -28,8 +29,9 @@ async function Game({ params }: { params: Promise<{ gameID: string }> }) {
   const { game } = await getGameByIDAction(gameID);
 
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center w-full h-full">
       <h1>{game.name}</h1>
+      <BackButton href="/games" />
 
       {game.reviews
         ? game.reviews.map((review) => (
