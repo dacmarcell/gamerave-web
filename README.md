@@ -41,3 +41,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - Deve mostrar toda a lista de jogos de forma paginada
 - Usuário convidado pode ver as publicações mas apenas o usuário logado pode dar like. (caso seja convidado, desabilitar o botão de like)
 - Todos os jogos da lista terão likes.
+
+### Requisitos não funcionais.
+
+- Obter a foto na web a partir do nome do game - pedir feedback ao usuário para saber se a foto está correta ou não
