@@ -1,3 +1,4 @@
+import ReviewCard from "@/components/ReviewCard";
 import { BASE_URL } from "@/constants";
 import { Game as GameType } from "@/types";
 
@@ -26,11 +27,15 @@ async function Game({ params }: { params: Promise<{ gameID: string }> }) {
   const gameID = (await params).gameID;
   const { game } = await getGameByIDAction(gameID);
 
-  console.log({ game });
-
   return (
     <div>
-      <p>My Post: {gameID}</p>
+      <h1>{game.name}</h1>
+
+      {game.reviews
+        ? game.reviews.map((review) => (
+            <ReviewCard key={review.id} review={review} />
+          ))
+        : null}
     </div>
   );
 }
