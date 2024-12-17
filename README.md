@@ -35,7 +35,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-### Requisitos do sistema
+### Requisitos funcionais
 
 - Deve ser feito utilizando SSR
 - Deve mostrar toda a lista de jogos de forma paginada
